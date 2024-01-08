@@ -25,20 +25,28 @@ const addListener = (li: HTMLLIElement,
     };
     return handler;
   }
-  li.addEventListener(eventType, removeLIHandler());
+  const currentHandler = removeLIHandler()
+  li.addEventListener(eventType, currentHandler );
+  return currentHandler;
 }
 
 const addListenerToLi = (li: HTMLLIElement, user: User) => {
+
+  const overHandler = addListener(li, 'mouseover', (li) => {
+  li.style.backgroundColor = 'red';
+  }, false);
+
+  const outHandler = addListener(li, 'mouseout', (li) => {
+    li.style.backgroundColor = 'white';
+  }, false);
+
   addListener(li, 'click', (li) => {
     li.remove();
     users.splice( users.indexOf(user), 1 );
+    li.removeEventListener('mouseover', overHandler);
+    li.removeEventListener('mouseout', outHandler);
   });
-  addListener(li, 'mouseover', (li) => {
-    li.style.backgroundColor = 'red';
-  }, false);
-  addListener(li, 'mouseout', (li) => {
-    li.style.backgroundColor = 'white';
-  }, false);
+
 };
 
 const greatListItemElem = (user: User) => {
