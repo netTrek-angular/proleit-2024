@@ -11,4 +11,5 @@
 // import './lib/003.class.inheritance';
 // import './lib/003.class.interfaces';
 // import './lib/003.class.lesson001';
-import './lib/003.class.angular-like-component';
+// import './lib/003.class.angular-like-component';
+import './lib/004.ts.syntax'
