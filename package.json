@@ -11,7 +11,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "http-server-4-dist-browser": "npx http-server ./dist/proleit/browser"
   },
   "private": true,
   "dependencies": {
