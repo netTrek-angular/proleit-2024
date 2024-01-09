@@ -1,3 +1,14 @@
+# setup
+
+- ng new proleit --prefix pl
+  - SCCS Style
+  - SSR nicht Aktiviert
+  - alternativ anzulegen in dem man die SSR und Style Optionen direkt übermittelt
+    - ng new proleit --prefix pl --style scss --ssr false
+- ng generate environments
+  - Damit mit Umgebungsvariablen gearbeitet werden kann
+
+
 # Proleit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
