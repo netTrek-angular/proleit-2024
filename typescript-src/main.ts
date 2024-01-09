@@ -8,6 +8,6 @@
 // import './lib/002.funct.async';
 // import './lib/002.funct.lesson002';
 // import './lib/003.class.syntax';
-import './lib/003.class.inheritance';
-
-
+// import './lib/003.class.inheritance';
+// import './lib/003.class.interfaces';
+import './lib/003.class.lesson001';
