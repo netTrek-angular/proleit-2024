@@ -71,7 +71,8 @@
               "buildTarget": "proleit:build:production"
             },
             "development": {
-              "buildTarget": "proleit:build:development"
+              "buildTarget": "proleit:build:development",
+              "host": "0.0.0.0"
             }
           },
           "defaultConfiguration": "development"
