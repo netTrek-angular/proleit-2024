@@ -1,0 +1,261 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.8",
+  "deps": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2",
+    "@angular-devkit/build-angular": "^17.0.9",
+    "@angular-eslint/builder": "17.2.0",
+    "@angular-eslint/eslint-plugin": "17.2.0",
+    "@angular-eslint/eslint-plugin-template": "17.2.0",
+    "@angular-eslint/schematics": "17.2.0",
+    "@angular-eslint/template-parser": "17.2.0",
+    "@angular/cli": "^17.0.9",
+    "@angular/compiler-cli": "^17.0.0",
+    "@cypress/schematic": "^2.5.1",
+    "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "6.18.0",
+    "@typescript-eslint/parser": "6.18.0",
+    "cypress": "latest",
+    "eslint": "^8.56.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17607888988494346052"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "10825819129154375468"
+      },
+      {
+        "file": "angular.json",
+        "hash": "10874829342830499675"
+      },
+      {
+        "file": "cypress.config.ts",
+        "hash": "6281556541504983834"
+      },
+      {
+        "file": "cypress/e2e/spec.cy.ts",
+        "hash": "1095376464736076130"
+      },
+      {
+        "file": "cypress/fixtures/example.json",
+        "hash": "13998363532807730308"
+      },
+      {
+        "file": "cypress/support/commands.ts",
+        "hash": "3746814855531474377"
+      },
+      {
+        "file": "cypress/support/component-index.html",
+        "hash": "17020623191569979315"
+      },
+      {
+        "file": "cypress/support/component.ts",
+        "hash": "4249101646379958589"
+      },
+      {
+        "file": "cypress/support/e2e.ts",
+        "hash": "11317776768185203511"
+      },
+      {
+        "file": "cypress/tsconfig.json",
+        "hash": "4369108315644098203"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7017142604513182471"
+      },
+      {
+        "file": "package.json",
+        "hash": "14151814462310479285"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "6880513722212066549"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "12486108131742967283"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "12366745911767709330"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "5428614352870646528"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "12397496131277534773"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/environments/environment.development.ts",
+        "hash": "9244686988137287364"
+      },
+      {
+        "file": "src/environments/environment.ts",
+        "hash": "16296087144457783775"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "9729261401896211433"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "6115527290616106916"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "15773060862031641972"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "6830907402848794383"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      },
+      {
+        "file": "tsconfig.ts.json",
+        "hash": "17997248781549950991"
+      },
+      {
+        "file": "typescript-src/index.html",
+        "hash": "2058868046766683198"
+      },
+      {
+        "file": "typescript-src/lib/000.helper.ts",
+        "hash": "12988239562371952549"
+      },
+      {
+        "file": "typescript-src/lib/001.var.implicity-explicity.ts",
+        "hash": "15306274722810350844"
+      },
+      {
+        "file": "typescript-src/lib/001.var.lists.ts",
+        "hash": "1501663406665002421"
+      },
+      {
+        "file": "typescript-src/lib/001.var.primitiv.ts",
+        "hash": "680624030637920387"
+      },
+      {
+        "file": "typescript-src/lib/001.var.typeing.ts",
+        "hash": "8004730812613183572"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.async.ts",
+        "hash": "13760089445877194260"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.lesson001.ts",
+        "hash": "16199848099170128416"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.lesson002.ts",
+        "hash": "9540708057990028080"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.parms.ts",
+        "hash": "3853734118310632094"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.syntax-arrow.ts",
+        "hash": "15766119282879931896"
+      },
+      {
+        "file": "typescript-src/lib/002.funct.syntax.ts",
+        "hash": "12397993932360254026"
+      },
+      {
+        "file": "typescript-src/lib/003.class.angular-like-component.ts",
+        "hash": "7777319256446033266"
+      },
+      {
+        "file": "typescript-src/lib/003.class.inheritance.ts",
+        "hash": "13414278748632468343"
+      },
+      {
+        "file": "typescript-src/lib/003.class.interfaces.ts",
+        "hash": "212448485427422247"
+      },
+      {
+        "file": "typescript-src/lib/003.class.lesson001.ts",
+        "hash": "15952559178331884998"
+      },
+      {
+        "file": "typescript-src/lib/003.class.syntax.ts",
+        "hash": "4046604664737919672"
+      },
+      {
+        "file": "typescript-src/lib/004.ts.syntax.ts",
+        "hash": "57338161154022449"
+      },
+      {
+        "file": "typescript-src/main.ts",
+        "hash": "2010283561821689996"
+      }
+    ]
+  }
+}

@@ -7,6 +7,8 @@
     - ng new proleit --prefix pl --style scss --ssr false
 - ng generate environments
   - Damit mit Umgebungsvariablen gearbeitet werden kann
+- ng generate application modBase --standalone false --prefix pl --style scss --ssr false
+  - Sample für ein Projekt ohne Standalone Komponenten
 
 
 # Proleit

@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:modBase": "ng serve modBase",
     "start:prod": "ng serve --configuration production",
     "build": "ng build",
     "build:dev": "ng build --configuration development",
