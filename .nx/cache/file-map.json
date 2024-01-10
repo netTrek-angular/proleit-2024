@@ -66,11 +66,11 @@
       },
       {
         "file": "README.md",
-        "hash": "10825819129154375468"
+        "hash": "2607347977342639736"
       },
       {
         "file": "angular.json",
-        "hash": "10874829342830499675"
+        "hash": "8653547877355628927"
       },
       {
         "file": "cypress.config.ts",
@@ -110,7 +110,63 @@
       },
       {
         "file": "package.json",
-        "hash": "14151814462310479285"
+        "hash": "3207437786381681372"
+      },
+      {
+        "file": "projects/mod-base/.eslintrc.json",
+        "hash": "4064981050894399545"
+      },
+      {
+        "file": "projects/mod-base/src/app/app-routing.module.ts",
+        "hash": "6250625392482207240"
+      },
+      {
+        "file": "projects/mod-base/src/app/app.component.html",
+        "hash": "6880513722212066549"
+      },
+      {
+        "file": "projects/mod-base/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/mod-base/src/app/app.component.spec.ts",
+        "hash": "7852437595011752360"
+      },
+      {
+        "file": "projects/mod-base/src/app/app.component.ts",
+        "hash": "4881747871956335914"
+      },
+      {
+        "file": "projects/mod-base/src/app/app.module.ts",
+        "hash": "1341940988703171679"
+      },
+      {
+        "file": "projects/mod-base/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/mod-base/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/mod-base/src/index.html",
+        "hash": "10069760314734271130"
+      },
+      {
+        "file": "projects/mod-base/src/main.ts",
+        "hash": "12246588107753938993"
+      },
+      {
+        "file": "projects/mod-base/src/styles.scss",
+        "hash": "5871086986702811321"
+      },
+      {
+        "file": "projects/mod-base/tsconfig.app.json",
+        "hash": "14176067227322044330"
+      },
+      {
+        "file": "projects/mod-base/tsconfig.spec.json",
+        "hash": "8046768446203215749"
       },
       {
         "file": "src/app/app.component.html",

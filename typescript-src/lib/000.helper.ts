@@ -3,9 +3,11 @@ export interface User {
   lastname: string;
 }
 
+const firstname = 'Max';
+
 export const getUsr = (): User[] => {
   return [{
-    firstname: "Margaux",
+    firstname,
     lastname: "Haig"
   }, {
     firstname: "Todd",
