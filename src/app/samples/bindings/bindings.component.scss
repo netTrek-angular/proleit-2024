@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  background-color: #cccccc;
+
+  .content-width {
+    display: block;
+    width: 300px;
+    background-color: red;
+  }
+}

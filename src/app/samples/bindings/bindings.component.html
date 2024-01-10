@@ -1,0 +1,16 @@
+<p style="color: red" [attr.aria-label]="imgFile">{{imgFile}}</p>
+<p [style.color]="fontColor" [innerText]="imgFile" aria-label="das ist der Name des Bildes"></p>
+
+<div [style.width]="width+'px'" class="content-width">Inhalt</div>
+<div [style.width.px]="width" class="content-width">Inhalt</div>
+
+<img src="./assets/cat.jpeg" alt="myCal">
+<hr>
+<img src="{{imgSrc}}" alt="myCal">
+<img src="./assets/{{imgFile}}" alt="myCal">
+<hr>
+<img [src]="imgSrc" alt="myCal">
+<img [attr.src]="imgSrc" alt="myCal">
+<hr>
+<button (click)="chgProps()">chgImd</button>
+
