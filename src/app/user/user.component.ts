@@ -10,4 +10,7 @@ import {UserListComponent} from "./user-list/user-list.component";
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
 })
-export class UserComponent {}
+export class UserComponent {
+
+
+}
