@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'pl-countdown',
@@ -13,9 +13,9 @@ export class CountdownComponent {
   static readonly MODE_COUNTDOWN = 'countdown';
 
 
-  percent = 0;
+  percent? = 0;
   private timer: number | null = null;
-  private mode: 'progress' | 'countdown'  = CountdownComponent.MODE_PROGRESS;
+  private mode: 'progress' | 'countdown'  = CountdownComponent.MODE_COUNTDOWN;
 
   constructor() {
     this.startTimer();
@@ -25,7 +25,9 @@ export class CountdownComponent {
     if ( this.timer ) {
       this.stopTimer()
     }
-    this.percent = this.mode === CountdownComponent.MODE_PROGRESS ? 0 : 100;
+    if ( !this.percent || this.percent === 100 || this.percent === 0 ) {
+      this.percent = this.mode === CountdownComponent.MODE_PROGRESS ? 0 : 100;
+    }
     this.timer = window.setInterval(() => {
       if ( this.mode === CountdownComponent.MODE_PROGRESS ) {
         this.incremtent();
@@ -42,16 +44,27 @@ export class CountdownComponent {
     }
   }
 
+  @HostListener('click', ['$event'])
+  private toogleTimer ( event: MouseEvent ) {
+    if ( event.altKey ) { // alt + click 2 restart
+      this.stopTimer();
+      this.percent = undefined;
+      this.startTimer()
+    } else {
+      this.timer ? this.stopTimer() : this.startTimer();
+    }
+  }
 
-  private incremtent( step: number = 10 ) {
-    this.percent = Math.min( this.percent + step, 100 );
+
+  private incremtent( step: number = 50 ) {
+    this.percent = Math.min( this.percent! + (100 / step), 100 );
     if ( this.percent === 100 ) {
       this.stopTimer();
     }
   }
 
-  private decremtent(step: number = 10) {
-    this.percent = Math.max( this.percent - step, 0 );
+  private decremtent(step: number = 50) {
+    this.percent = Math.max( this.percent! - (100 / step), 0 );
     if ( this.percent === 0 ) {
       this.stopTimer();
     }

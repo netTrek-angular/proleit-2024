@@ -1,3 +1,21 @@
+<h3>bindings</h3>
+
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor earum harum, molestiae nesciunt quidem tenetur vel! Excepturi, possimus, quaerat! Animi aperiam blanditiis culpa dolor ex facere maxime voluptatum! Explicabo, odit.</div>
+<hr>
+
+<div class="content" [class]="className">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi debitis, dignissimos doloribus eius fugit hic illo molestiae natus quae quas quasi reiciendis repellendus reprehenderit, soluta tenetur ullam vel voluptatum.</div>
+<hr>
+
+<!-- wertänderungen bitte nur in der Klasse
+<div (mouseenter)="isSelectd=true" (mouseleave)="isSelectd=false" class="content" [class.content-red]="isSelectd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi debitis, dignissimos doloribus eius fugit hic illo molestiae natus quae quas quasi reiciendis repellendus reprehenderit, soluta tenetur ullam vel voluptatum.</div>
+<div (mouseenter)="setAsSelected( $event )" (mouseleave)="setAsUnselected()" class="content" [class.content-red]="isSelectd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi debitis, dignissimos doloribus eius fugit hic illo molestiae natus quae quas quasi reiciendis repellendus reprehenderit, soluta tenetur ullam vel voluptatum.</div>
+-->
+<div (mouseenter)="chgSelectionByEventType( $event )" (mouseleave)="chgSelectionByEventType( $event )" class="content" [class.content-red]="isSelectd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi debitis, dignissimos doloribus eius fugit hic illo molestiae natus quae quas quasi reiciendis repellendus reprehenderit, soluta tenetur ullam vel voluptatum.</div>
+<hr>
+
+<div>seleced := {{ getSelected() }}</div>
+<!--
+
 <p style="color: red" [attr.aria-label]="imgFile">{{imgFile}}</p>
 <p [style.color]="fontColor" [innerText]="imgFile" aria-label="das ist der Name des Bildes"></p>
 
@@ -12,5 +30,6 @@
 <img [src]="imgSrc" alt="myCal">
 <img [attr.src]="imgSrc" alt="myCal">
 <hr>
-<button (click)="chgProps()">chgImd</button>
 
+<button (click)="chgProps()">chgImd</button>
+-->

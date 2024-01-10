@@ -2,6 +2,16 @@
   display: block;
   background-color: #cccccc;
 
+  // font-size: larger;
+
+  .content {
+    font-weight: bolder;
+  }
+
+  .content-red {
+    color: red;
+  }
+
   .content-width {
     display: block;
     width: 300px;
