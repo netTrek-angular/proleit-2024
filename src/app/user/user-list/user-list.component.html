@@ -1,16 +1,23 @@
 <p>user-list works in Module!</p>
 
-<h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'mo selection'}}</h4>
+<h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'no selection'}}</h4>
 
-<pl-user-list-item
-  (selectUsr)="setSelectedUser($event)"
-  [userData]="userList[0]"
-></pl-user-list-item>
+@for ( usr of userList; track usr.firstname; let ind = $index, e=$even) {
+  <pl-user-list-item
+    [class.even]="e"
+    [class.selected]="selectedUser === usr"
+    (selectUsr)="setSelectedUser($event)"
+    [userData]="usr"
+  ></pl-user-list-item>
 
+}
+
+<!--
 
 <pl-user-list-item
   (selectUsr)="setSelectedUser($event)"
   [userData]="userList[1]"
 ></pl-user-list-item>
+-->
 
 <button (click)="updateFirst()">update first item</button>

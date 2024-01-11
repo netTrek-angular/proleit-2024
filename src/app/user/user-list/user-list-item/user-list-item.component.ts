@@ -4,7 +4,6 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  numberAttribute,
   OnChanges,
   OnInit,
   Output,

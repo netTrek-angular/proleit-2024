@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: rgba(65, 64, 64, 0.1);
+  // background-color: rgba(65, 64, 64, 0.1);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
+
+/*
+@if( true ) {
+  @import 'styles-light';
+}
+@else {
+  @import 'styles-dark';
+}
+*/

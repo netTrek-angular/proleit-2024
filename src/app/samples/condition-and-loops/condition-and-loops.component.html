@@ -1,0 +1,59 @@
+<p>condition-and-loops works!</p>
+
+
+<button (click)="increment()">increment</button>
+<button (click)="toggleImg()">toggle img</button>
+
+
+<ul>
+  <!--
+  bitte nie unnötige HTML Elemente verwenden, um für einen strukturelle Direktive eine Container zu schaffen
+  <span *ngFor="let usr of userList">
+  -->
+  <ng-container *ngFor="let usr of userList; index as i; last as l; even as e">
+    <li [class.even]="e" *ngIf="usr.firstname !== 'Max'">{{i}} {{l}} {{e}} {{usr.firstname}}</li>
+  </ng-container>
+  <!--
+  <li *ngFor="let usr of userList">{{usr.firstname}}</li>
+  -->
+</ul>
+
+
+<span *ngIf="showImage">zeige das Bild</span>
+|
+<ng-container *ngIf="showImage">
+  zeige das Bild
+</ng-container>
+
+<hr>
+@if (num === 1) {
+  num is 1
+} @else if (num === 2) {
+  <span>num is 2</span>
+} @else {
+  <span>num is {{ num }}</span>
+}
+<hr>
+@if (showImage) {
+  <img src="./assets/cat.jpeg" alt="myCat">
+} @else {
+  <span>no image available</span>
+}
+<hr>
+
+<!--
+<div *ngIf="true">true</div>
+<div *ngIf="num === 1">true</div>
+
+<img *ngIf="showImage" src="./assets/cat.jpeg" alt="myCat">
+<ng-template [ngIf]="showImage" [ngIfElse]="hiddenImg">
+  <img src="./assets/cat.jpeg" alt="myCat">
+</ng-template>
+<ng-template #hiddenImg>
+  <span>no image available</span>
+</ng-template>
+<hr>
+<img *ngIf="showImage" src="./assets/cat.jpeg" alt="myCat">
+-->
+
+

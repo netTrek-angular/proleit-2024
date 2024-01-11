@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  li {
+    &.even {
+      color: #d02525;
+    }
+  }
+  /*
+  li.even {
+      color: #d02525;
+  }
+  */
+}
+

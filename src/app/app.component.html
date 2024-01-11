@@ -1,7 +1,7 @@
 <header>
   <h1>Hello Standalone {{title}}</h1>
 </header>
-
+<button (click)="switchTheme('light')">light</button> <button (click)="switchTheme('dark')">dark</button>
 <!--
 <pl-countdown></pl-countdown>
 <pl-bindings></pl-bindings>
@@ -11,7 +11,9 @@
 <pl-countdown style="width: 100vw"></pl-countdown>
 
 <pl-user-list></pl-user-list>
+<pl-condition-and-loops></pl-condition-and-loops>
 -->
-
 <pl-user></pl-user>
+
+
 <router-outlet></router-outlet>
