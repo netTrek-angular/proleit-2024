@@ -5,5 +5,7 @@
   [userData]="userList[0]"
 ></pl-user-list-item>
 <pl-user-list-item
+  (selectUsr)="setSelectedUser($event)"
   [userData]="userList[1]"
 ></pl-user-list-item>
+<button (click)="updateFirst()">update first item</button>

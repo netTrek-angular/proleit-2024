@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {getUsr} from "../../helper/mockdaten";
 import {UserListItemComponent} from "./user-list-item/user-list-item.component";
 import {User} from "../user";
@@ -20,5 +20,9 @@ export class UserListComponent {
 
   setSelectedUser(user: User) {
     this.selectedUser = user;
+  }
+
+  updateFirst() {
+    this.userList[0] = { firstname: 'Saban', lastname: 'Ünlü'} as User;
   }
 }
