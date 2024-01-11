@@ -1,4 +1,13 @@
-import {AfterContentInit, Component, ContentChild, ContentChildren, QueryList} from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import {getUsr} from "../../helper/mockdaten";
 import {UserListItemComponent} from "./user-list-item/user-list-item.component";
 import {User} from "../user";
@@ -13,18 +22,23 @@ import {User} from "../user";
   styleUrl: './user-list.component.scss'
 })
 // Eltern komponente von UserListItemComponent
-export class UserListComponent implements AfterContentInit{
+export class UserListComponent implements AfterViewInit, OnInit {
+
 
 
   userList = getUsr();
   selectedUser?: User;
 
-  // erste Komponente vom Typ UserListItemComponent transkuldiert
-  @ContentChild(UserListItemComponent)
+
+  @ViewChild('myHeader', {static: true})
+  myHeader?: ElementRef<HTMLHeadingElement>;
+
+  // erste Komponente vom Typ UserListItemComponent in der Vorlage
+  @ViewChild(UserListItemComponent, {static: true})
   myUserListItemComponent?: UserListItemComponent;
 
-  // verwenden wenn mehrere Komponenten vom Typ UserListItemComponent transkuldiert werden
-  @ContentChildren(UserListItemComponent)
+  // alle Komponenten vom Typ UserListItemComponent in der Vorlage
+  @ViewChildren(UserListItemComponent)
   myUserListItemComponents?: QueryList<UserListItemComponent>
 
   setSelectedUser(user: User) {
@@ -35,20 +49,25 @@ export class UserListComponent implements AfterContentInit{
     this.userList[0] = { firstname: 'Saban', lastname: 'Ünlü'} as User;
   }
 
-  ngAfterContentInit(): void {
+  ngOnInit(): void {
+    console.log( this.myUserListItemComponent, this.myHeader ); // in init erreichbar weil static true
+  }
 
-    console.log( this.myUserListItemComponents?.toArray() );
+  ngAfterViewInit(): void {
 
-    // todo auf Änderungen reagieren
-    // this.myUserListItemComponents?.changes;
-
+    // WICHTIG - Geht theoretisch man sollte Aber den Zustand der Komponente nicht auf diese Art ändern
     /*
     this.myUserListItemComponent!.userData = {
       firstname: 'Saban',
       lastname: 'Ünlü'
     }
-
     */
+    this.myUserListItemComponent?.sayHello();
+    console.log( this.myUserListItemComponents?.toArray()  );
+
+    // todo auf Änderungen reagieren
+    // this.myUserListItemComponents?.changes;
+
   }
 
 

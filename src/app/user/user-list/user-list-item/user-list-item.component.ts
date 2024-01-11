@@ -28,6 +28,10 @@ export class UserListItemComponent implements OnInit, AfterViewInit, OnChanges {
   // @Input( {required: true, transform: numberAttribute}) num!: number;
   @Output() selectUsr = new EventEmitter<User>();
 
+  sayHello() {
+    console.log('hello', this);
+  }
+
   @HostListener('click')
   triggerEvent() {
     this.selectUsr.emit(this.userData);
