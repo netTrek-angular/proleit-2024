@@ -8,6 +8,7 @@ import {CountdownComponent} from "./samples/countdown/countdown.component";
 import {ConditionAndLoopsComponent} from "./samples/condition-and-loops/condition-and-loops.component";
 import {DangerDirective} from "./helper/danger.directive";
 import {PipeSamplesComponent} from "./samples/pipe-samples/pipe-samples.component";
+import {UserService} from "./user/user.service";
 
 @Component({
   selector: 'pl-root',
@@ -37,8 +38,10 @@ export class AppComponent {
 
   private _linkRef?: HTMLLinkElement;
 
-  constructor() {
+  // im Constructor injizieren - old school
+  constructor( readonly $user: UserService ) {
     this.switchTheme();
+    console.log( this.$user );
   }
 
   switchTheme( theme: 'light' | 'dark' = 'light' ) {

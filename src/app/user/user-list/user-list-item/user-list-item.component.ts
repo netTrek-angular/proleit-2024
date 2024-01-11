@@ -33,6 +33,8 @@ export class UserListItemComponent implements OnInit, AfterViewInit, OnChanges {
   // @Input( {required: true, transform: numberAttribute}) num!: number;
   @Output() selectUsr = new EventEmitter<User>();
 
+  // private readonly $user = inject( UserService );
+
   sayHello() {
     console.log('hello', this);
   }
@@ -48,6 +50,7 @@ export class UserListItemComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngOnInit(): void {
+    // console.log('init', this.$user );
     return undefined; // nur gemacht damit die console stumm bleibt
     // console.log('ini', this.userData );
   }

@@ -2,7 +2,7 @@ import {
   AfterContentInit,
   AfterViewInit,
   Component,
-  ElementRef,
+  ElementRef, inject,
   OnInit,
   QueryList,
   ViewChild,
@@ -11,6 +11,7 @@ import {
 import {getUsr} from "../../helper/mockdaten";
 import {UserListItemComponent} from "./user-list-item/user-list-item.component";
 import {User} from "../user";
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'pl-user-list',
@@ -26,7 +27,8 @@ export class UserListComponent implements AfterViewInit, OnInit {
 
 
 
-  userList = getUsr();
+  // userList = getUsr();
+
   selectedUser?: User;
 
 
@@ -41,12 +43,14 @@ export class UserListComponent implements AfterViewInit, OnInit {
   @ViewChildren(UserListItemComponent)
   myUserListItemComponents?: QueryList<UserListItemComponent>
 
+  readonly $user = inject( UserService );
+
   setSelectedUser(user: User) {
     this.selectedUser = user;
   }
 
   updateFirst() {
-    this.userList[0] = { firstname: 'Saban', lastname: 'Ünlü'} as User;
+    // this.userList[0] = { firstname: 'Saban', lastname: 'Ünlü'} as User;
   }
 
   ngOnInit(): void {

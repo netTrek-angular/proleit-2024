@@ -2,7 +2,7 @@
 
 <h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'no selection'}}</h4>
 
-@for ( usr of userList; track ind; let ind = $index, even = $even ) {
+@for ( usr of $user.userList; track ind; let ind = $index, even = $even ) {
   <pl-user-list-item
     [class.even]="even"
     [class.selected]="selectedUser === usr"
@@ -41,4 +41,4 @@
 ></pl-user-list-item>
 -->
 
-<button (click)="updateFirst()">update first item</button>
+<button (click)="$user.updateFirst()">update first item</button>

@@ -13,8 +13,11 @@
 
 <pl-user-list></pl-user-list>
 <pl-condition-and-loops></pl-condition-and-loops>
--->
-<pl-user></pl-user>
 <pl-pipe-samples></pl-pipe-samples>
+-->
+
+<pl-user></pl-user>
+
+<p>{{$user.userList[0] | json }}</p>
 
 <router-outlet></router-outlet>
