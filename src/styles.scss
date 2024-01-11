@@ -4,12 +4,3 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-
-/*
-@if( true ) {
-  @import 'styles-light';
-}
-@else {
-  @import 'styles-dark';
-}
-*/

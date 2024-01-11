@@ -2,15 +2,36 @@
 
 <h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'no selection'}}</h4>
 
-@for ( usr of userList; track usr.firstname; let ind = $index, e=$even) {
+@for ( usr of userList; track ind; let ind = $index, even = $even ) {
+  <pl-user-list-item
+    [class.even]="even"
+    [class.selected]="selectedUser === usr"
+    (selectUsr)="setSelectedUser($event)"
+    [userData]="usr"
+  ></pl-user-list-item>
+}
+<!--
+
+@for ( usr of userList; track ind; let ind = $index ) {
+  <pl-user-list-item
+    [class.even]="$even"
+    [class.selected]="selectedUser === usr"
+    (selectUsr)="setSelectedUser($event)"
+    [userData]="usr"
+  ></pl-user-list-item>
+}
+-->
+
+<!--@for ( usr of userList; track usr.firstname; let ind = $index, e=$even) {
   <pl-user-list-item
     [class.even]="e"
     [class.selected]="selectedUser === usr"
     (selectUsr)="setSelectedUser($event)"
     [userData]="usr"
   ></pl-user-list-item>
-
 }
+-->
+
 
 <!--
 

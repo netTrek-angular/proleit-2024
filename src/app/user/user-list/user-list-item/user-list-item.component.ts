@@ -37,16 +37,18 @@ export class UserListItemComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngAfterViewInit(): void {
-    console.log('after view init' );
+    return undefined; // nur gemacht damit die console stumm bleibt
+    // console.log('after view init' );
   }
 
   ngOnInit(): void {
-    console.log('ini', this.userData );
+    return undefined; // nur gemacht damit die console stumm bleibt
+    // console.log('ini', this.userData );
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if ( 'userData' in changes ) {
-      console.log('userData changes', changes['userData'].currentValue );
+      // console.log('userData changes', changes['userData'].currentValue );
     }
   }
 }

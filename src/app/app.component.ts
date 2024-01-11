@@ -6,13 +6,18 @@ import {UserListComponent} from "./user/user-list/user-list.component";
 import {BindingsComponent} from "./samples/bindings/bindings.component";
 import {CountdownComponent} from "./samples/countdown/countdown.component";
 import {ConditionAndLoopsComponent} from "./samples/condition-and-loops/condition-and-loops.component";
+import {DangerDirective} from "./helper/danger.directive";
 
 @Component({
   selector: 'pl-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,
     UserComponent,
-    UserListComponent, BindingsComponent, CountdownComponent, ConditionAndLoopsComponent
+    UserListComponent,
+    BindingsComponent,
+    CountdownComponent,
+    ConditionAndLoopsComponent,
+    DangerDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,7 +1,8 @@
 <header>
   <h1>Hello Standalone {{title}}</h1>
 </header>
-<button (click)="switchTheme('light')">light</button> <button (click)="switchTheme('dark')">dark</button>
+<button plDanger="Möchtest du Hell?" (confirmed)="switchTheme('light')">light</button>
+<button plDanger (confirmed)="switchTheme('dark')">dark</button>
 <!--
 <pl-countdown></pl-countdown>
 <pl-bindings></pl-bindings>

@@ -50,7 +50,8 @@ export class UserListComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    console.log( this.myUserListItemComponent, this.myHeader ); // in init erreichbar weil static true
+    return undefined; // nur gemacht damit die console stumm bleibt
+    // console.log( this.myUserListItemComponent, this.myHeader ); // in init erreichbar weil static true
   }
 
   ngAfterViewInit(): void {
@@ -63,7 +64,7 @@ export class UserListComponent implements AfterViewInit, OnInit {
     }
     */
     this.myUserListItemComponent?.sayHello();
-    console.log( this.myUserListItemComponents?.toArray()  );
+    // console.log( this.myUserListItemComponents?.toArray()  );
 
     // todo auf Änderungen reagieren
     // this.myUserListItemComponents?.changes;
