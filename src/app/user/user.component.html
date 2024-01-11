@@ -1,2 +1,14 @@
 <h3>users</h3>
-<pl-user-list></pl-user-list>
+<pl-user-list>
+
+  <h4>my list</h4>
+
+  <pl-user-list-item
+    [userData]="{firstname: 'John', lastname: 'Doe'}"
+  ></pl-user-list-item>
+
+  <pl-user-list-item
+    [userData]="{firstname: 'John2', lastname: 'Doe2'}"
+  ></pl-user-list-item>
+
+</pl-user-list>

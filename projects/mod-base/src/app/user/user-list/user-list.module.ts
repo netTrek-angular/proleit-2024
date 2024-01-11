@@ -11,7 +11,8 @@ import {UserListItemComponent} from "./user-list-item/user-list-item.component";
     ],
     imports: [CommonModule],
     exports: [
-      UserListComponent
+      UserListComponent,
+      UserListItemComponent
     ]
   }
 )
