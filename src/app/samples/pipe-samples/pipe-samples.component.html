@@ -1,0 +1,18 @@
+<p>pipe-samples works!</p>
+<ul>
+  <li>datum := {{date}}</li>
+  <li>datum := {{date | date}}</li>
+  <li>datum := {{date | date : 'long'}}</li>
+  <li>datum := {{date | date : 'short'}}</li>
+  <li>datum := {{date | date : 'd.M.yy'}}</li>
+  <li>datum := {{date | date : 'long' : '+0400'}}</li>
+</ul>
+
+<ul>
+  <li>preis {{price}}</li>
+  <li>preis {{price | number}}</li>
+  <li>preis {{price | currency}}</li>
+  <li>preis {{price | currency : 'EUR' : 'symbol' : '.5'}}</li>
+  <li>preis {{price | currency : 'EUR' : 'symbol' : '2.5'}}</li>
+  <li>preis {{price | currency : 'EUR' : 'symbol' : '.2' : 'de'}}</li>
+</ul>

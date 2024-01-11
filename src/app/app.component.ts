@@ -7,6 +7,7 @@ import {BindingsComponent} from "./samples/bindings/bindings.component";
 import {CountdownComponent} from "./samples/countdown/countdown.component";
 import {ConditionAndLoopsComponent} from "./samples/condition-and-loops/condition-and-loops.component";
 import {DangerDirective} from "./helper/danger.directive";
+import {PipeSamplesComponent} from "./samples/pipe-samples/pipe-samples.component";
 
 @Component({
   selector: 'pl-root',
@@ -17,7 +18,7 @@ import {DangerDirective} from "./helper/danger.directive";
     BindingsComponent,
     CountdownComponent,
     ConditionAndLoopsComponent,
-    DangerDirective
+    DangerDirective, PipeSamplesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

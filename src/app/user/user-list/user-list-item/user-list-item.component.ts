@@ -10,11 +10,17 @@ import {
   SimpleChanges
 } from '@angular/core';
 import {User} from "../../user";
+import {JsonPipe, UpperCasePipe} from "@angular/common";
+import {SpacerPipe} from "../../../samples/pipe-samples/spacer.pipe";
 
 @Component({
   selector: 'pl-user-list-item',
   standalone: true,
-  imports: [],
+  imports: [
+    UpperCasePipe,
+    JsonPipe,
+    SpacerPipe
+  ],
   templateUrl: './user-list-item.component.html',
   styleUrl: './user-list-item.component.scss'
 })
