@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {getUsr} from "../../helper/mockdaten";
 import {UserListItemComponent} from "./user-list-item/user-list-item.component";
+import {User} from "../user";
 
 @Component({
   selector: 'pl-user-list',
@@ -11,7 +12,13 @@ import {UserListItemComponent} from "./user-list-item/user-list-item.component";
   ],
   styleUrl: './user-list.component.scss'
 })
+// Eltern komponente von UserListItemComponent
 export class UserListComponent {
 
   userList = getUsr();
+  selectedUser?: User;
+
+  setSelectedUser(user: User) {
+    this.selectedUser = user;
+  }
 }

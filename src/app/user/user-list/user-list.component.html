@@ -1,2 +1,9 @@
 <p>user-list works in Module!</p>
-<pl-user-list-item [userData]="userList[0]"></pl-user-list-item>
+<h4>selected:= {{selectedUser?.firstname ?? 'mo selection'}}</h4>
+<pl-user-list-item
+  (selectUsr)="setSelectedUser($event)"
+  [userData]="userList[0]"
+></pl-user-list-item>
+<pl-user-list-item
+  [userData]="userList[1]"
+></pl-user-list-item>

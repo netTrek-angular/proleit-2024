@@ -14,7 +14,7 @@ import {UserListModule} from "./user/user-list/user-list.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserListModule
+    UserListModule,
   ],
   providers: [],
   exports: [
