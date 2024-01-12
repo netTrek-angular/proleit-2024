@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {UserListComponent} from "./user-list/user-list.component";
 import {UserListItemComponent} from "./user-list/user-list-item/user-list-item.component";
-import {UserService} from "./user.service";
 
 @Component({
   selector: 'pl-user',
@@ -16,6 +15,6 @@ import {UserService} from "./user.service";
   styleUrl: './user.component.scss',
 })
 export class UserComponent {
-
+  @Input( {required: true} ) selectedUsrId?: number | string;
 
 }

@@ -3,13 +3,29 @@
 </header>
 
 
-@if(this.$theme.isLight()) {
+
+<nav>
+  <a routerLink="user" routerLinkActive="active">user</a>
+  |
+  <a routerLink="rxjs" routerLinkActive="active">rxjs</a>
+  |
+  <a routerLink="pipe" routerLinkActive="active">pipe</a>
+  |
+  <a routerLink="conditions" routerLinkActive="active">conditions</a>
+  |
+  <a routerLink="admin/settings" routerLinkActive="active">setting</a>
+  |
+  <a routerLink="admin/server" routerLinkActive="active">server</a>
+  |
+  <a routerLink="contact" routerLinkActive="active">contact</a>
+  <hr>
+  @if(this.$theme.isLight()) {
   <button (click)="switchTheme('dark')">dark</button>
 } @else {
   <button (click)="switchTheme('light')">light</button>
 }
-<span> selected Theme {{this.$theme.theme()}}</span>
-
+  <span> selected Theme {{this.$theme.theme()}}</span>
+</nav>
 
 <!--
 <pl-rxjs></pl-rxjs>
@@ -35,8 +51,8 @@
 
 <p>{{$user.userList[0] | json }}</p>
 
+<pl-user></pl-user>
 -->
 
-<pl-user></pl-user>
-
+<hr>
 <router-outlet></router-outlet>

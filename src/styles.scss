@@ -4,3 +4,8 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
+a.active {
+  color: red;
+  font-weight: bolder;
+}

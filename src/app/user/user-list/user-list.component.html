@@ -1,4 +1,4 @@
-<p>user-list works in Module!</p>
+<p>user-list works in Module! {{selectedID}}</p>
 
 @for ( name of $user.allFirstnames(); track $index ) {
   <div (click)="$user.setAsSelected($index)">

@@ -2,7 +2,7 @@ import {
   AfterContentInit,
   AfterViewInit,
   Component,
-  ElementRef, inject,
+  ElementRef, inject, Input,
   OnInit,
   QueryList,
   ViewChild,
@@ -46,6 +46,7 @@ export class UserListComponent implements AfterViewInit, OnInit {
   myUserListItemComponents?: QueryList<UserListItemComponent>
 
   readonly $user = inject( UserService );
+  @Input() selectedID!: number | string | undefined;
 
   setSelectedUser(user: User) {
     this.selectedUser = user;

@@ -1,5 +1,5 @@
 import {ApplicationConfig, LOCALE_ID} from '@angular/core';
-import {provideRouter} from '@angular/router';
+import {provideRouter, withComponentInputBinding} from '@angular/router';
 
 import {routes} from './app.routes';
 import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi} from "@angular/common/http";
@@ -17,6 +17,6 @@ export const appConfig: ApplicationConfig = {
         // autInterceptor
       ] )
     ),
-    provideRouter(routes)
+    provideRouter(routes, withComponentInputBinding() )
   ]
 };
