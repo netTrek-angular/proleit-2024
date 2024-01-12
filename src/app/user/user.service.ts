@@ -7,7 +7,7 @@ import {inject, Injectable, LOCALE_ID} from "@angular/core";
 export class UserService {
 
   readonly userList = getUsr();
-  readonly locale = inject( LOCALE_ID );
+  readonly locale = inject( LOCALE_ID ); // ng 17 +
 
   constructor(  ) {
     console.log( 'constructor', this.userList, this.locale );

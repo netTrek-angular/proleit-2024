@@ -10,6 +10,7 @@ import {DangerDirective} from "./helper/danger.directive";
 import {PipeSamplesComponent} from "./samples/pipe-samples/pipe-samples.component";
 import {UserService} from "./user/user.service";
 import {ThemeService} from "./helper/theme.service";
+import {RxjsComponent} from "./samples/rxjs/rxjs.component";
 
 @Component({
   selector: 'pl-root',
@@ -20,7 +21,7 @@ import {ThemeService} from "./helper/theme.service";
     BindingsComponent,
     CountdownComponent,
     ConditionAndLoopsComponent,
-    DangerDirective, PipeSamplesComponent
+    DangerDirective, PipeSamplesComponent, RxjsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

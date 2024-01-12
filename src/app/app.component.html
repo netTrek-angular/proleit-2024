@@ -2,6 +2,7 @@
   <h1>Hello Standalone {{title}}</h1>
 </header>
 
+<pl-rxjs></pl-rxjs>
 
 @if(this.$theme.isLight()) {
   <button (click)="switchTheme('dark')">dark</button>
@@ -10,7 +11,14 @@
 }
 <span> selected Theme {{this.$theme.theme()}}</span>
 
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque cumque deleniti doloremque ea enim excepturi illo illum labore mollitia natus nemo, nisi pariatur perferendis quia quo reprehenderit suscipit veniam.</div>
+
 <!--
+
+-->
+
+<!--
+<p>first user = {{$user.userList[0].firstname}}</p>
 <button plDanger="Möchtest du Hell?" (confirmed)="switchTheme('light')">light</button>
 <button plDanger (confirmed)="switchTheme('dark')">dark</button>
 <pl-countdown></pl-countdown>
@@ -23,10 +31,12 @@
 <pl-user-list></pl-user-list>
 <pl-condition-and-loops></pl-condition-and-loops>
 <pl-pipe-samples></pl-pipe-samples>
--->
 
 <pl-user></pl-user>
-
 <p>{{$user.userList[0] | json }}</p>
+
+
+-->
+
 
 <router-outlet></router-outlet>

@@ -70,7 +70,7 @@
       },
       {
         "file": "angular.json",
-        "hash": "8653547877355628927"
+        "hash": "5436939803751223074"
       },
       {
         "file": "cypress.config.ts",
@@ -122,7 +122,7 @@
       },
       {
         "file": "projects/mod-base/src/app/app.component.html",
-        "hash": "6880513722212066549"
+        "hash": "14928740077630427215"
       },
       {
         "file": "projects/mod-base/src/app/app.component.scss",
@@ -138,7 +138,59 @@
       },
       {
         "file": "projects/mod-base/src/app/app.module.ts",
-        "hash": "1341940988703171679"
+        "hash": "3959486097472760561"
+      },
+      {
+        "file": "projects/mod-base/src/app/helper/mockdaten.ts",
+        "hash": "16441116826679541408"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list-item/user-list-item.component.html",
+        "hash": "9013382563773928919"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list-item/user-list-item.component.scss",
+        "hash": "10921222987277260634"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list-item/user-list-item.component.spec.ts",
+        "hash": "6991764114489657762"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list-item/user-list-item.component.ts",
+        "hash": "1786288692306183771"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list.component.html",
+        "hash": "13632586976528713214"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list.component.ts",
+        "hash": "17707885626519964842"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user-list/user-list.module.ts",
+        "hash": "7981477675918492852"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user.component.html",
+        "hash": "13237408153457280664"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user.component.scss",
+        "hash": "13027103444035360129"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user.component.ts",
+        "hash": "3094404372771262621"
+      },
+      {
+        "file": "projects/mod-base/src/app/user/user.ts",
+        "hash": "7066410082476375462"
       },
       {
         "file": "projects/mod-base/src/assets/.gitkeep",
@@ -150,15 +202,15 @@
       },
       {
         "file": "projects/mod-base/src/index.html",
-        "hash": "10069760314734271130"
+        "hash": "13182608497500898198"
       },
       {
         "file": "projects/mod-base/src/main.ts",
-        "hash": "12246588107753938993"
+        "hash": "13521274861688336131"
       },
       {
         "file": "projects/mod-base/src/styles.scss",
-        "hash": "5871086986702811321"
+        "hash": "17355657332829914516"
       },
       {
         "file": "projects/mod-base/tsconfig.app.json",
@@ -170,7 +222,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "6880513722212066549"
+        "hash": "3996236392181769014"
       },
       {
         "file": "src/app/app.component.scss",
@@ -182,19 +234,179 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "12366745911767709330"
+        "hash": "9439470721402612141"
       },
       {
         "file": "src/app/app.config.ts",
-        "hash": "5428614352870646528"
+        "hash": "17168348209027873499"
       },
       {
         "file": "src/app/app.routes.ts",
         "hash": "12397496131277534773"
       },
       {
+        "file": "src/app/helper/danger.directive.spec.ts",
+        "hash": "8105719791184829145"
+      },
+      {
+        "file": "src/app/helper/danger.directive.ts",
+        "hash": "11306696315292701584"
+      },
+      {
+        "file": "src/app/helper/mockdaten.ts",
+        "hash": "16441116826679541408"
+      },
+      {
+        "file": "src/app/helper/theme.service.spec.ts",
+        "hash": "12659729553284747897"
+      },
+      {
+        "file": "src/app/helper/theme.service.ts",
+        "hash": "8679832518222866581"
+      },
+      {
+        "file": "src/app/samples/bindings/bindings.component.html",
+        "hash": "168309690964588225"
+      },
+      {
+        "file": "src/app/samples/bindings/bindings.component.scss",
+        "hash": "9219470003433934650"
+      },
+      {
+        "file": "src/app/samples/bindings/bindings.component.spec.ts",
+        "hash": "2320769883301349193"
+      },
+      {
+        "file": "src/app/samples/bindings/bindings.component.ts",
+        "hash": "9366448072441444664"
+      },
+      {
+        "file": "src/app/samples/condition-and-loops/condition-and-loops.component.html",
+        "hash": "7295484972022005163"
+      },
+      {
+        "file": "src/app/samples/condition-and-loops/condition-and-loops.component.scss",
+        "hash": "6327781673719759494"
+      },
+      {
+        "file": "src/app/samples/condition-and-loops/condition-and-loops.component.spec.ts",
+        "hash": "16147718442655053634"
+      },
+      {
+        "file": "src/app/samples/condition-and-loops/condition-and-loops.component.ts",
+        "hash": "15693639669068757778"
+      },
+      {
+        "file": "src/app/samples/countdown/countdown.component.html",
+        "hash": "540771768191627100"
+      },
+      {
+        "file": "src/app/samples/countdown/countdown.component.scss",
+        "hash": "6148529110484858084"
+      },
+      {
+        "file": "src/app/samples/countdown/countdown.component.spec.ts",
+        "hash": "2526192835152773149"
+      },
+      {
+        "file": "src/app/samples/countdown/countdown.component.ts",
+        "hash": "6362139965234981310"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/pipe-samples.component.html",
+        "hash": "2877170556758774314"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/pipe-samples.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/pipe-samples.component.spec.ts",
+        "hash": "5895251439306467831"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/pipe-samples.component.ts",
+        "hash": "4277914634454003666"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/spacer.pipe.spec.ts",
+        "hash": "448972248727336364"
+      },
+      {
+        "file": "src/app/samples/pipe-samples/spacer.pipe.ts",
+        "hash": "13652745953563101669"
+      },
+      {
+        "file": "src/app/samples/rxjs/rxjs.component.html",
+        "hash": "589919661220422901"
+      },
+      {
+        "file": "src/app/samples/rxjs/rxjs.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/samples/rxjs/rxjs.component.spec.ts",
+        "hash": "12152386355587266154"
+      },
+      {
+        "file": "src/app/samples/rxjs/rxjs.component.ts",
+        "hash": "16966509189118962438"
+      },
+      {
+        "file": "src/app/user/user-list/user-list-item/user-list-item.component.html",
+        "hash": "1330129906331850382"
+      },
+      {
+        "file": "src/app/user/user-list/user-list-item/user-list-item.component.scss",
+        "hash": "10012981147061164127"
+      },
+      {
+        "file": "src/app/user/user-list/user-list-item/user-list-item.component.spec.ts",
+        "hash": "9597770631078009651"
+      },
+      {
+        "file": "src/app/user/user-list/user-list-item/user-list-item.component.ts",
+        "hash": "7747752531625153139"
+      },
+      {
+        "file": "src/app/user/user-list/user-list.component.html",
+        "hash": "17160461176549644321"
+      },
+      {
+        "file": "src/app/user/user-list/user-list.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/user/user-list/user-list.component.ts",
+        "hash": "9303806012285723161"
+      },
+      {
+        "file": "src/app/user/user.component.html",
+        "hash": "1910790077512265379"
+      },
+      {
+        "file": "src/app/user/user.component.scss",
+        "hash": "391123127929787939"
+      },
+      {
+        "file": "src/app/user/user.component.ts",
+        "hash": "17596821009687358215"
+      },
+      {
+        "file": "src/app/user/user.service.ts",
+        "hash": "16535508974772891892"
+      },
+      {
+        "file": "src/app/user/user.ts",
+        "hash": "7066410082476375462"
+      },
+      {
         "file": "src/assets/.gitkeep",
         "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/cat.jpeg",
+        "hash": "11093269596586736037"
       },
       {
         "file": "src/environments/environment.development.ts",
@@ -214,11 +426,19 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "6115527290616106916"
+        "hash": "17571257714555056907"
+      },
+      {
+        "file": "src/styles-dark.scss",
+        "hash": "10046501294019280243"
+      },
+      {
+        "file": "src/styles-light.scss",
+        "hash": "5938961578736801890"
       },
       {
         "file": "src/styles.scss",
-        "hash": "15773060862031641972"
+        "hash": "14243048508413587039"
       },
       {
         "file": "tsconfig.app.json",
@@ -242,7 +462,7 @@
       },
       {
         "file": "typescript-src/lib/000.helper.ts",
-        "hash": "12988239562371952549"
+        "hash": "9791673701548131054"
       },
       {
         "file": "typescript-src/lib/001.var.implicity-explicity.ts",

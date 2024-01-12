@@ -5,10 +5,13 @@ import {computed, effect, Injectable, signal} from '@angular/core';
 })
 export class ThemeService {
 
-  readonly theme = signal<'light' | 'dark'>(localStorage.getItem('selectedTheme') as 'light' | 'dark' || 'light')
+  readonly theme =
+    signal<'light' | 'dark'>(localStorage.getItem('selectedTheme') as 'light' | 'dark' || 'light')
+
   private readonly localStorgeEff = effect(
     () => localStorage.setItem('selectedTheme', this.theme() ),
   )
+
   readonly isDark = computed( () => this.theme() === 'dark' );
   readonly isLight = computed( () => !this.isDark() );
 
