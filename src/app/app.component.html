@@ -2,7 +2,6 @@
   <h1>Hello Standalone {{title}}</h1>
 </header>
 
-<pl-rxjs></pl-rxjs>
 
 @if(this.$theme.isLight()) {
   <button (click)="switchTheme('dark')">dark</button>
@@ -11,9 +10,10 @@
 }
 <span> selected Theme {{this.$theme.theme()}}</span>
 
-<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque cumque deleniti doloremque ea enim excepturi illo illum labore mollitia natus nemo, nisi pariatur perferendis quia quo reprehenderit suscipit veniam.</div>
 
 <!--
+<pl-rxjs></pl-rxjs>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque cumque deleniti doloremque ea enim excepturi illo illum labore mollitia natus nemo, nisi pariatur perferendis quia quo reprehenderit suscipit veniam.</div>
 
 -->
 
@@ -32,11 +32,11 @@
 <pl-condition-and-loops></pl-condition-and-loops>
 <pl-pipe-samples></pl-pipe-samples>
 
-<pl-user></pl-user>
-<p>{{$user.userList[0] | json }}</p>
 
+<p>{{$user.userList[0] | json }}</p>
 
 -->
 
+<pl-user></pl-user>
 
 <router-outlet></router-outlet>

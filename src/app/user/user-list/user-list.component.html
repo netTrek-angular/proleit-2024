@@ -1,5 +1,30 @@
 <p>user-list works in Module!</p>
 
+@for ( name of $user.allFirstnames(); track $index ) {
+  <div (click)="$user.setAsSelected($index)">
+    <button (click)="$user.delUserAt($index)">-</button>
+    <button (click)="$user.delUser($user.users()[$index])">x</button>
+    {{ name }}
+  </div>
+}
+
+<input placeholder="Vorname" [(ngModel)]="$user.firstname" [ngModelOptions]="{standalone: true}">
+<input placeholder="Nachname" [(ngModel)]="$user.lastname" [ngModelOptions]="{standalone: true}">
+
+<button
+  [disabled]="$user.firstname.trim() === '' || $user.lastname.trim() === ''"
+  (click)="$user.addUser({firstname: $user.firstname, lastname: $user.lastname} )"
+>add</button>
+
+<button
+  [disabled]="$user.firstname.trim() === '' || $user.lastname.trim() === ''"
+  (click)="$user.updateUserAt($user.selectedIndex(), {firstname: $user.firstname, lastname: $user.lastname})"
+>edit first</button>
+<button (click)="$user.delAllUsers()" [disabled]="$user.users().length === 0">delete all</button>
+
+
+
+<!--
 <h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'no selection'}}</h4>
 
 @for ( usr of $user.userList; track ind; let ind = $index, even = $even ) {
@@ -10,7 +35,6 @@
     [userData]="usr"
   ></pl-user-list-item>
 }
-<!--
 
 @for ( usr of userList; track ind; let ind = $index ) {
   <pl-user-list-item
@@ -39,6 +63,6 @@
   (selectUsr)="setSelectedUser($event)"
   [userData]="userList[1]"
 ></pl-user-list-item>
+<button (click)="$user.updateFirst()">update first item</button>
 -->
 
-<button (click)="$user.updateFirst()">update first item</button>
