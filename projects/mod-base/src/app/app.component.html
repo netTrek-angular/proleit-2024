@@ -1,6 +1,15 @@
 <header>
   <h1>Hello {{title}}</h1>
 </header>
-<pl-user></pl-user>
-
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  |
+  <a routerLink="/contact" routerLinkActive="active">Kontakt</a>
+  |
+  <a routerLink="/user" routerLinkActive="active">User</a>
+  |
+  <a [routerLink]="['/user', 1]" routerLinkActive="active">User</a>
+  |
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+</nav>
 <router-outlet></router-outlet>

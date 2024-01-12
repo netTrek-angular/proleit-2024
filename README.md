@@ -10,6 +10,10 @@
 - ng generate application modBase --standalone false --prefix pl --style scss --ssr false
   - Sample für ein Projekt ohne Standalone Komponenten
 
+# lazy loaded modules
+- cd projects/mod-base/src/app
+- ng generate module admin --routing --route admin --module app
+
 
 # Proleit
 

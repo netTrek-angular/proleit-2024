@@ -30,6 +30,7 @@ export class UserService {
 
   constructor() {
     this.updateUsers();
+    // this.$http.get('https://jsonplaceholder.typicode.com/users/').subscribe();
   }
 
 
