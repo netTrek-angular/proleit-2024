@@ -11,6 +11,7 @@ import {PipeSamplesComponent} from "./samples/pipe-samples/pipe-samples.componen
 import {UserService} from "./user/user.service";
 import {ThemeService} from "./helper/theme.service";
 import {RxjsComponent} from "./samples/rxjs/rxjs.component";
+import {LazyLogic} from "./lazy-logic/lazy-logic";
 
 @Component({
   selector: 'pl-root',
@@ -30,8 +31,17 @@ export class AppComponent {
   title = 'proleit';
   readonly $theme = inject( ThemeService);
 
+  numLogic!: LazyLogic;
   // im Constructor injizieren - old school
-  constructor( public readonly $user: UserService ) {}
+  constructor( public readonly $user: UserService ) {
+    // import('./lazy-logic/uint-plug-in')
+    import('./lazy-logic/num-plug-in')
+      .then(esModul => esModul.NumPlugIn).then( (clazz) => {
+      this.numLogic = new clazz();
+      this.numLogic.num = -99;
+      console.log(this.numLogic.getNum());
+    } );
+  }
 
   switchTheme( theme: 'light' | 'dark' = 'light' ) {
     this.$theme.setTheme( theme );
