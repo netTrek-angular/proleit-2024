@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 import {UserComponent} from "./user/user.component";
 import {UserListComponent} from "./user/user-list/user-list.component";
 import {BindingsComponent} from "./samples/bindings/bindings.component";
@@ -9,6 +9,7 @@ import {ConditionAndLoopsComponent} from "./samples/condition-and-loops/conditio
 import {DangerDirective} from "./helper/danger.directive";
 import {PipeSamplesComponent} from "./samples/pipe-samples/pipe-samples.component";
 import {UserService} from "./user/user.service";
+import {ThemeService} from "./helper/theme.service";
 
 @Component({
   selector: 'pl-root',
@@ -26,26 +27,12 @@ import {UserService} from "./user/user.service";
 })
 export class AppComponent {
   title = 'proleit';
-
-  get linkRef(): HTMLLinkElement {
-    if ( !this._linkRef ) {
-      this._linkRef = document.createElement('link');
-      this._linkRef.rel = 'stylesheet';
-      document.head.append( this._linkRef );
-    }
-    return this._linkRef;
-  }
-
-  private _linkRef?: HTMLLinkElement;
+  readonly $theme = inject( ThemeService);
 
   // im Constructor injizieren - old school
-  constructor( readonly $user: UserService ) {
-    this.switchTheme();
-    console.log( this.$user );
-  }
+  constructor( public readonly $user: UserService ) {}
 
   switchTheme( theme: 'light' | 'dark' = 'light' ) {
-    this.linkRef.href = `${theme}.css`;
+    this.$theme.setTheme( theme );
   }
-
 }

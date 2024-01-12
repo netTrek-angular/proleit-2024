@@ -1,9 +1,18 @@
 <header>
   <h1>Hello Standalone {{title}}</h1>
 </header>
+
+
+@if(this.$theme.isLight()) {
+  <button (click)="switchTheme('dark')">dark</button>
+} @else {
+  <button (click)="switchTheme('light')">light</button>
+}
+<span> selected Theme {{this.$theme.theme()}}</span>
+
+<!--
 <button plDanger="Möchtest du Hell?" (confirmed)="switchTheme('light')">light</button>
 <button plDanger (confirmed)="switchTheme('dark')">dark</button>
-<!--
 <pl-countdown></pl-countdown>
 <pl-bindings></pl-bindings>
 
