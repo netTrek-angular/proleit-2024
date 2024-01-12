@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {UserComponent} from './user/user.component';
 import {UserListModule} from "./user/user-list/user-list.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {UserListModule} from "./user/user-list/user-list.module";
     BrowserModule,
     AppRoutingModule,
     UserListModule,
+    HttpClientModule
   ],
   providers: [],
   exports: [

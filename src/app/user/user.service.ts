@@ -1,13 +1,13 @@
-import {getUsr} from "../helper/mockdaten";
-import {computed, effect, Injectable, signal, untracked} from "@angular/core";
+import {computed, effect, inject, Injectable, signal, untracked} from "@angular/core";
 import {User} from "./user";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  readonly users = signal( getUsr() );
+  readonly users = signal<User[]>( []);
 
   readonly allFirstnames = computed( () =>
     this.users().map( u => u.firstname ) );
@@ -26,49 +26,45 @@ export class UserService {
     console.log( 'users changed', this.users(), untracked( this.selectedIndex ) );
   } );
 
+  private readonly $http = inject(HttpClient);
 
-
-  addUser( ...newUser: User[] ) {
-    this.users.update( value => [ ...value, ...newUser ] ); // immutable
-    this.reset ();
-    return this.users();
+  constructor() {
+    this.updateUsers();
   }
 
-  delAllUsers() {
-    this.users.set( [] );
-    this.reset ();
-    return [];
+
+  addUser( newUser: User ) {
+    this.$http.post<User>('http://localhost:3000/users', newUser).subscribe( {
+      next: () => this.updateUsers(),
+      error: error => console.log( error )
+    })
+  }
+
+
+  private delUsrByID(usrID: number|string ) {
+    this.$http.delete<void>(`http://localhost:3000/users/${usrID}`).subscribe( {
+      next: () => this.updateUsers(),
+      error: error => console.log( error )
+    });
   }
 
   delUserAt( index: number ) {
     const users = this.users();
-    return this.deleteIndexInList(index, users);
+    if ( users[index] ) {
+      this.delUsrByID( users[index].id! );
+    }
   }
 
-  private deleteIndexInList(index: number, users: User[]) {
-    if (index > -1) {
-      users.splice(index, 1);
-      this.users.update(() => [...users]);
-    }
-    this.reset();
-    return users;
-  }
 
   delUser( user: User ) {
-    const users = this.users();
-    const foundedInd = users
-      .findIndex( u => u.firstname === user.firstname && u.lastname === user.lastname );
-    return this.deleteIndexInList(foundedInd, users);
+    this.delUsrByID( user.id! );
   }
 
   updateUserAt ( index: number, user: User ) {
-    const users = [...this.users()];
-    if ( users[index] ) {
-      users[index] = user;
-    }
-    this.users.update( () => users );
-    this.reset ();
-    return users;
+    this.$http.put<User>(`http://localhost:3000/users/${this.users()[index].id}`, user).subscribe( {
+      next: () => this.updateUsers(),
+      error: error => console.log( error )
+    });
   }
 
 
@@ -89,5 +85,15 @@ export class UserService {
     this.firstname = '';
     this.lastname = '';
     this.selectedIndex.set( -1 );
+  }
+
+  private updateUsers() {
+    this.$http.get<User[]>('http://localhost:3000/users').subscribe( {
+      next: users => {
+        this.users.set(users);
+        this.reset();
+      },
+      error: error => console.log( error )
+    })
   }
 }

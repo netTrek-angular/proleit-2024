@@ -14,7 +14,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "http-server-4-dist-browser": "npx http-server ./dist/proleit/browser",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "start:mock-server": "json-server --watch mock/db.json"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "cypress": "latest",
     "eslint": "^8.56.0",
     "jasmine-core": "~5.1.0",
+    "json-server": "^1.0.0-alpha.19",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

@@ -10,7 +10,7 @@
 
 <input placeholder="Vorname" [(ngModel)]="$user.firstname" [ngModelOptions]="{standalone: true}">
 <input placeholder="Nachname" [(ngModel)]="$user.lastname" [ngModelOptions]="{standalone: true}">
-
+<hr>
 <button
   [disabled]="$user.firstname.trim() === '' || $user.lastname.trim() === ''"
   (click)="$user.addUser({firstname: $user.firstname, lastname: $user.lastname} )"
@@ -19,12 +19,12 @@
 <button
   [disabled]="$user.firstname.trim() === '' || $user.lastname.trim() === ''"
   (click)="$user.updateUserAt($user.selectedIndex(), {firstname: $user.firstname, lastname: $user.lastname})"
->edit first</button>
-<button (click)="$user.delAllUsers()" [disabled]="$user.users().length === 0">delete all</button>
+>edit</button>
 
 
 
 <!--
+<button (click)="$user.delAllUsers()" [disabled]="$user.users().length === 0">delete all</button>
 <h4 #myHeader>selected:= {{selectedUser?.firstname ?? 'no selection'}}</h4>
 
 @for ( usr of $user.userList; track ind; let ind = $index, even = $even ) {

@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstname": "Bab",
+      "lastname": "Giampietro"
+    },
+    {
+      "id": "2",
+      "firstname": "Anastasia",
+      "lastname": "Nourse"
+    },
+    {
+      "id": "3",
+      "firstname": "Nora",
+      "lastname": "Tapin"
+    },
+    {
+      "id": "7860",
+      "firstname": "Saban",
+      "lastname": "Ünlü"
+    }
+  ]
+}
